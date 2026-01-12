@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "JohnnyMorganz.stylua",
+    "esbenp.prettier-vscode",
+    "editorconfig.editorconfig",
+    "overextended.cfxlua-vscode",
+    "sumneko.lua"
+  ]
+}

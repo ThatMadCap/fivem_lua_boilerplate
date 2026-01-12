@@ -2,9 +2,11 @@
 local commands = lib.require('modules.server.commands')
 
 -- Localised Functions --------------------------------------------
-local RegisterNetEvent = RegisterNetEvent
-local GetPlayerServerId = GetPlayerServerId
 local GetCurrentResourceName = GetCurrentResourceName
+local GetPlayerServerId = GetPlayerServerId
+local RegisterNetEvent = RegisterNetEvent
+local assert = assert
+local GetResourceState = GetResourceState
 local AddEventHandler = AddEventHandler
 
 -- Global Variables ------------------------------------------------
@@ -40,6 +42,7 @@ end)
 lib.versionCheck('GITHUB_USERNAME/RESOURCE_NAME')
 
 local function init()
+    assert(GetResourceState('ox_lib') == 'started', 'ox_lib is not started. Please ensure ox_lib is installed and started before ' .. resourceName)
     serverFunctionExample()
     commands.initCommands()
 end
@@ -51,7 +54,7 @@ end
 
 -- Event Handlers --------------------------------------------------
 AddEventHandler('onResourceStart', function(resName)
-    if GetCurrentResourceName() ~= resName then
+    if resourceName ~= resName then
         return
     end
 
@@ -59,7 +62,7 @@ AddEventHandler('onResourceStart', function(resName)
 end)
 
 AddEventHandler('onResourceStop', function(resName)
-    if GetCurrentResourceName() ~= resName then
+    if resourceName ~= resName then
         return
     end
 

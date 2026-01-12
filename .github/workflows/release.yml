@@ -56,12 +56,7 @@ jobs:
           ls
           mkdir -p ./temp/RESOURCE_NAME
           cp LICENSE.md README.md fxmanifest.lua ./temp/RESOURCE_NAME/ || true
-          for d in bridge client server config data modules locales docs; do
-            if [ -d "$d" ]; then
-              cp -r "$d" ./temp/RESOURCE_NAME/
-            fi
-          done
-          find ./temp -type d -empty -delete
+          cp -r ./{bridge,client,shared,server,config,data,modules,locales,docs,web} ./temp/RESOURCE_NAME
           cd ./temp && zip -r ../RESOURCE_NAME.zip ./RESOURCE_NAME
 
       - name: Create Release

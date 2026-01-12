@@ -8,6 +8,8 @@ version('0.0.0')
 description('')
 author('GITHUB_USERNAME')
 
+ui_page('web/index.html')
+
 dependencies({
     'ox_lib',
 })
@@ -34,4 +36,5 @@ files({
     'config/*.lua',
     'bridge/**/*',
     'data/*.json',
+    'web/**/*',
 })

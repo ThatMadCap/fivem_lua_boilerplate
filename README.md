@@ -39,6 +39,7 @@ modules/         Modular functionality
 config/          Configuration files (client.lua, server.lua, shared.lua)
 data/            Static data (data.json example)
 locales/         Translation files (en.json)
+web/             UI pages and assets (HTML, CSS, JavaScript)
 .vscode/         Editor settings and recommended extensions
 .github/         CI/CD workflows and actions
 ```

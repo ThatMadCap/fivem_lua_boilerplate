@@ -4,7 +4,7 @@ A resource boilerplate for simple use. Includes structured project layout, pre-c
 
 ## Features
 
-- **ox_lib Integration**: Built to use with [ox_lib](https://github.com/CommunityOx/ox_lib)
+- **ox_lib Integration**: Built to use with [ox_lib](https://github.com/communityox/ox_lib)
 - **Bridge System**: Detects external resources and loads appropriate implementations, providing global functions for cross-resource compatibility
 - **Auto-formatting**: StyLua and Prettier configured with format-on-save in VSCode
 - **GitHub Actions**: Automated release workflow with version bumping and code formatting
@@ -151,7 +151,7 @@ Example files in `client/`, `server/`, `shared/`, and `modules/` demonstrate com
 
 ## Dependencies
 
-- [ox_lib](https://github.com/CommunityOx/ox_lib)
+- [ox_lib](https://github.com/communityox/ox_lib)
 
 ## License
 
